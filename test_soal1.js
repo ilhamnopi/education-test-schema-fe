@@ -42,10 +42,44 @@ document.addEventListener("DOMContentLoaded", function () {
     const angka = /[0-9]+$/;
     if (inputValidasi.match(validasiHuruf)) {
       alert("Sistem memeriksa data anda valid dengan ketentuan kami dengan inputan: " + inputValidasi);
+      console.log("Sistem memeriksa data anda valid dengan ketentuan kami dengan inputan: " + inputValidasi);
     } else {
       alert("Sistem kami menolak untuk inputan berisi angka :" + inputValidasi.match(angka));
+      console.log("Sistem kami menolak untuk inputan berisi angka :" + inputValidasi.match(angka));
     }
   }
 });
 
 // Soal 3
+
+console.log("3.1");
+function soal3pertama(baris1) {
+  let pola = "";
+
+  for (let index = 1; index <= baris1; index++) {
+    for (let x = 1; x <= index; x++) {
+      pola += "*";
+    }
+    pola += "\n";
+  }
+  return pola;
+}
+console.log(soal3pertama(5));
+
+console.log("3.2");
+function soal3(baris) {
+  let pola = "";
+
+  for (let i = 1; i <= baris; i++) {
+    for (let j = baris - 1; j >= i; j--) {
+      pola += " ";
+    }
+    for (let k = 1; k <= i; k++) {
+      pola += "*";
+    }
+    pola += "\n";
+  }
+  return pola;
+}
+
+console.log(soal3(5));
